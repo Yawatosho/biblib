@@ -25,10 +25,68 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="びぶりぶ" />
     <link rel="manifest" href="./site.webmanifest" />
-    <script type="module" crossorigin src="./assets/index-DCY0xYgv.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CDqOUhnx.css">
+    <link rel="stylesheet" media="print" data-boot-optional
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;display=swap"
+      onload="this.media='all'" />
+    <style>
+      .boot-card[hidden], .boot-script .boot-no-js { display: none; }
+      .boot-card { position: fixed; z-index: 5000; inset: 0; display: grid; place-items: center; padding: 24px; background: #f6f3e9f2; font: 16px/1.7 system-ui, sans-serif; color: #4f5547; }
+      .boot-card > div { width: min(100%, 340px); padding: 26px; box-sizing: border-box; text-align: center; background: #fffbee; border: 1px solid #c9ac6c; border-radius: 14px; box-shadow: 0 4px 0 #d8cfb6; }
+      .boot-card p { margin: 8px 0; }
+      .boot-card button { padding: 10px 20px; font: inherit; border: 1px solid #718767; border-radius: 8px; color: #fffbee; background: #526849; cursor: pointer; }
+    </style>
+    <script>
+      (() => {
+        document.documentElement.classList.add('boot-script');
+        let resourceFailed = false, show, deadline;
+        const paint = (text, failed) => {
+          const card = document.getElementById('boot-card');
+          if (!card) {
+            document.addEventListener('DOMContentLoaded', () => paint(text, failed), { once: true });
+            return;
+          }
+          card.querySelector('p').textContent = text;
+          card.querySelector('button').hidden = !failed;
+          card.hidden = false;
+        };
+        const stop = () => { clearTimeout(show); clearTimeout(deadline); };
+        window.biblibBoot = {
+          start() { return !resourceFailed; },
+          begin(text = '図書館の準備をしています…') {
+            if (resourceFailed) return;
+            stop();
+            show = setTimeout(() => paint(text, false), 300);
+            deadline = setTimeout(() => window.biblibBoot.fail(), 12000);
+          },
+          ready() {
+            if (resourceFailed) return;
+            stop();
+            document.getElementById('boot-card').hidden = true;
+          },
+          fail() {
+            stop();
+            paint('図書館を開けませんでした。接続を確認して、もう一度お試しください。', true);
+          },
+        };
+        window.addEventListener('error', event => {
+          const node = event.target;
+          if (!node?.hasAttribute?.('data-boot-optional') && (node?.tagName === 'SCRIPT' ||
+              (node?.tagName === 'LINK' && ['stylesheet', 'modulepreload'].includes(node.rel)))) {
+            resourceFailed = true;
+            window.biblibBoot.fail();
+          }
+        }, true);
+        window.biblibBoot.begin();
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-Cb84i4zE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CBaHTs8O.css">
   </head>
   <body>
     <div id="viewport"><main id="app"></main></div>
+    <section class="boot-card" id="boot-card" aria-label="読み込み状況" hidden>
+      <div><strong>✦ びぶりぶ</strong><p role="status"></p><button type="button" onclick="location.reload()" hidden>再試行</button></div>
+    </section>
+    <section class="boot-card boot-no-js"><div><strong>✦ びぶりぶ</strong><p>遊ぶには、ブラウザでJavaScriptを有効にしてからページを再読み込みしてください。</p></div></section>
   </body>
 </html>
