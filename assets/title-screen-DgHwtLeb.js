@@ -1,4 +1,4 @@
-import{f as a}from"./index-IB3eUnPq.js";const s=new URL(""+new URL("title-MhAHD50_.webp",import.meta.url).href,import.meta.url).href,i=new URL(""+new URL("logo-D1aO3tEq.webp",import.meta.url).href,import.meta.url).href;function c(){document.body.classList.add("title-page"),document.querySelector("#viewport").classList.add("title-viewport");const t=document.querySelector("#app");t.classList.add("title-screen"),t.dataset.screen="title";const e=a();t.innerHTML=`
+import{f as a}from"./index-DCY0xYgv.js";const s=new URL(""+new URL("title-MhAHD50_.webp",import.meta.url).href,import.meta.url).href,i=new URL(""+new URL("logo-D1aO3tEq.webp",import.meta.url).href,import.meta.url).href;function c(){document.body.classList.add("title-page"),document.querySelector("#viewport").classList.add("title-viewport");const t=document.querySelector("#app");t.classList.add("title-screen"),t.dataset.screen="title";const e=a();t.innerHTML=`
     <img class="title-art" src="${s}" alt="" fetchpriority="high" draggable="false">
     <h1 class="title-logo"><img src="${i}" alt="BibLib びぶりぶ" draggable="false"></h1>
     <nav class="title-menu" aria-label="メインメニュー">
