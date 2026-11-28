@@ -1,4 +1,4 @@
-import{c as b}from"./classic-art-B3yJAYvl.js";import{s as u}from"./index-ex-TV_m2.js";const p={classic:"スコアアタック",story:"ストーリーモード"},h=b.pictures[0];function m(a,i,s,n=h){document.querySelector("#app").setAttribute("data-mode",a),document.querySelector("#app").innerHTML=`
+import{c as b}from"./classic-art-B3yJAYvl.js";import{s as u}from"./index-CVI-5qgW.js";const p={classic:"スコアアタック",story:"ストーリーモード"},h=b.pictures[0];function m(a,i,s,n=h){document.querySelector("#app").setAttribute("data-mode",a),document.querySelector("#app").innerHTML=`
   <div class="library-scene" aria-hidden="true">
     <div class="library-window"><i></i><i></i></div><div class="window-light"></div>
     ${[0,1].map(r=>`<div class="distant-shelf side-${r}">${Array.from({length:5},(e,c)=>`<div>${Array.from({length:7},(v,d)=>`<i style="--h:${18+(d*11+c*7)%22}px;--c:${["#aca18b","#a5b29b","#b5a3ba","#c0ad89"][d%4]}"></i>`).join("")}</div>`).join("")}</div>`).join("")}
