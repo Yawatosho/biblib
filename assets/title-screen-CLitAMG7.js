@@ -1,4 +1,4 @@
-import{c as a}from"./index-CkNcDHNG.js";const s=new URL(""+new URL("title-MhAHD50_.webp",import.meta.url).href,import.meta.url).href,i=new URL(""+new URL("logo-D1aO3tEq.webp",import.meta.url).href,import.meta.url).href;function n(){document.title="びぶりぶ",document.body.classList.add("title-page"),document.querySelector("#viewport").classList.add("title-viewport");const t=document.querySelector("#app");t.classList.add("title-screen"),t.dataset.screen="title";const e=a();t.innerHTML=`
+import{c as a}from"./index-ex-TV_m2.js";const s=new URL(""+new URL("title-MhAHD50_.webp",import.meta.url).href,import.meta.url).href,i=new URL(""+new URL("logo-D1aO3tEq.webp",import.meta.url).href,import.meta.url).href;function c(){document.title="びぶりぶ",document.body.classList.add("title-page"),document.querySelector("#viewport").classList.add("title-viewport");const t=document.querySelector("#app");t.classList.add("title-screen"),t.dataset.screen="title";const e=a();t.innerHTML=`
     <img class="title-art" src="${s}" alt="" fetchpriority="high" draggable="false">
     <h1 class="title-logo"><img src="${i}" alt="BibLib びぶりぶ" draggable="false"><span aria-hidden="true">びぶりぶ</span></h1>
     <nav class="title-menu" aria-label="メインメニュー">
@@ -29,7 +29,11 @@ import{c as a}from"./index-CkNcDHNG.js";const s=new URL(""+new URL("title-MhAHD5
       </button>
     </nav>
     <footer class="title-credit">
-      作成：やわらか図書館学 <a href="https://yawatosho.github.io/">YAWATOSHO GAMES</a>
-      <a href="./" data-screen-target="privacy">プライバシーポリシー</a>
-      <a href="./" data-screen-target="offline">オフライン準備</a>
-    </footer>`}export{n as mountTitleScreen};
+      <div class="title-credit-row">
+        <span>作成：やわらか図書館学</span><a href="https://yawatosho.github.io/">YAWATOSHO GAMES</a>
+      </div>
+      <div class="title-credit-row">
+        <a href="./" data-screen-target="privacy">プライバシーポリシー</a>
+        <a href="./" data-screen-target="offline">オフライン準備</a>
+      </div>
+    </footer>`}export{c as mountTitleScreen};
