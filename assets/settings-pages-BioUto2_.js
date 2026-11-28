@@ -1,4 +1,4 @@
-import{s as f,o as g,l as h,m as y,q as b,t as v}from"./index-CVI-5qgW.js";function c(n,e){const o=document.querySelector("#app");return document.title=`${n} | びぶりぶ`,o.innerHTML=`<section class="library-settings" aria-labelledby="settings-title">
+import{s as f,o as g,l as h,m as y,q as b,t as v}from"./index-DgL9jjzv.js";function c(n,e){const o=document.querySelector("#app");return document.title=`${n} | びぶりぶ`,o.innerHTML=`<section class="library-settings" aria-labelledby="settings-title">
     <header><button type="button" class="text-button" data-screen-target="title">‹ タイトル</button>
     <h1 id="settings-title">${n}</h1></header>
     <div class="settings-paper">${e}</div>
